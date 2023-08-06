@@ -6,6 +6,12 @@ function ExpenseForm(props) {
   const [enteredTitle, setEnterTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const D=new Date()
+  var dd = D.getDate()
+  var mm = D.getMonth()+1;
+  var yyyy = D.getFullYear();
+  var currentDate=dd+'-'+mm+'-'+yyyy
+  console.log(currentDate)
 
   // const [userInput,setUserInput] = useState({
   //   enteredTitle:"",
@@ -78,7 +84,7 @@ function ExpenseForm(props) {
           <input
             type="date"
             min="2019-01-01"
-            max="2022-12-31"
+            max={currentDate}
             value={enteredDate}
             onChange={dateChangeHandler}
           />
@@ -92,3 +98,5 @@ function ExpenseForm(props) {
 }
 
 export default ExpenseForm;
+
+

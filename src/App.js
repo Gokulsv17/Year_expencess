@@ -37,17 +37,6 @@ const [expenses,setExpenses]=  useState(DUMMY_EXPENSES)
     return [expense, ...prevExpenses]
    })
   }
-
-
-  // return React.createElement(
-  //   "div",
-  //   {},
-  //   React.createElement("h1", {}, "Let' Get Started"),
-  //   React.createElement(Expenses, {
-  //     items: expenses,
-  //   })
-  // );
-
   return (
     <div className="App">
     <h1>Let's Get Started</h1>
